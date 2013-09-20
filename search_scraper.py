@@ -70,11 +70,11 @@ def scrape(url):
 
     if start_count <= end_count:
 
-      # Wait 5 seconds before visiting the next page
+      # Wait "sleep_time" seconds before visiting the next page
       sleep(sleep_time)
 
       # Recursive call, visit the next page
-      init(base_url + str(start_count))
+      scrape(base_url + str(start_count))
 
 
 
